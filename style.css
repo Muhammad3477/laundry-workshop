@@ -1,0 +1,310 @@
+/* Warna tema */
+:root {
+    --primary-color: #4CAF50; /* Hijau segar */
+    --secondary-color: #f0f4f8; /* Abu muda background */
+    --accent-color: #ff6f61; /* Warna cerah untuk aksen */
+    --text-color: #333;
+    --nav-bg: #ffffff;
+    --footer-bg: #f8f8f8;
+}
+
+/* Reset umum */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+/* Navbar Transparan Awal */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* Saat Scroll, Navbar Berubah */
+.navbar.scrolled {
+    background: linear-gradient(to right, #6dd5fa, #2980b9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* CSS Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hero-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .services-container, .pricing-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .service {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pricing-table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    form#pickup-form {
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+
+/* Hero */
+#hero {
+    background: linear-gradient(135deg, var(--primary-color) 40%, var(--accent-color) 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Tombol */
+.btn-penjemputan, .btn-submit {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn-penjemputan:hover, .btn-submit:hover {
+    background-color: #ff4c3b;
+}
+
+/* Section umum */
+section {
+    padding: 60px 20px;
+}
+
+/* Layanan */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Pricing */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+    text-align: center;
+}
+
+.pricing-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* WhatsApp Link */
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+    font-size: 1.5rem;
+}
+
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* =============================== */
+/* Dekorasi random boneka/vakum */
+/* =============================== */
+.decoration {
+    position: absolute;
+    width: 60px;
+    opacity: 0.7;
+    animation: float 6s ease-in-out infinite;
+}
+
+.decoration-1 {
+    top: 20px;
+    left: 10%;
+}
+
+.decoration-2 {
+    top: 150px;
+    right: 10%;
+}
+
+.decoration-3 {
+    bottom: 50px;
+    left: 30%;
+}
+
+.decoration-4 {
+    bottom: 100px;
+    right: 25%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
